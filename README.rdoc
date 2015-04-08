@@ -6,14 +6,30 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+    ruby 2.2.1
 
 * System dependencies
+    rails 4.2.1
+
+    'gem install rails'
 
 * Configuration
 
 * Database creation
 
+    To create a new model, enter the command
+        'rails generate scaffold Model_Name attribue:type attribute:type...'
+
+    Example:
+        'rails generate scaffold Student sid:integer sname:string email:string pwd:string token:string'
+
 * Database initialization
+
+    The first time you go to run the server, you'll probably need to create the production and development databases. To do this, run 
+        'bundle exec rake db:create'
+
+    If you made any changes to the models or haven't migrated yet, run
+        'bundle exec rake db:migrate'
 
 * How to run the test suite
 
