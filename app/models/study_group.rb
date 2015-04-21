@@ -1,8 +1,15 @@
 class StudyGroup < ActiveRecord::Base
-	has_many :meeting_time
-	belongs_to :creator
-	belongs_to :for_course
-	has_and_belongs_to_many :member
-	validates_presence_of :creator
-	validates_presence_of :for_course
+	#One-to-many relationship between StudyGroup and meeting_times
+	has_many :meeting_times
+
+	#Many-to-one rel. between study_group and course
+	belongs_to :course
+
+	#Rich many-to-many rel. between studygroup and student
+	has_many :members
+	has_many :students, :through => :member
+
+	#Rich many-to-one rel. between studygroup and student where studen is the creator
+	has_one :create_studygroup
+	has_one :student, :through => :create_studygroup
 end

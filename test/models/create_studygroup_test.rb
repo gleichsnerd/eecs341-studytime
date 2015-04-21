@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CreatorTest < ActiveSupport::TestCase
+class CreateStudygroupTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

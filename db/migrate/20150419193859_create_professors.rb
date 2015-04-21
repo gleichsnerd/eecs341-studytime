@@ -2,7 +2,7 @@ class CreateProfessors < ActiveRecord::Migration
   def change
     create_table :professors do |t|
 
-    	t.integer "pid", :null => false
+    	#t.integer "pid", :null => false
     	t.string "pname"
     	t.string "email"
     	

@@ -1,4 +1,6 @@
 class Professor < ActiveRecord::Base
-	has_and_belongs_to_many :teach
-	validates_presence_of :teach
+	#Rich many-to-many rel. between professor and course
+	has_many :teaches
+	has_many :courses, :through => :teaches
+
 end

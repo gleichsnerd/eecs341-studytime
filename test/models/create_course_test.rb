@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ForCourseTest < ActiveSupport::TestCase
+class CreateCourseTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
