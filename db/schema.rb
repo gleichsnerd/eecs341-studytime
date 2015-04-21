@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150421003524) do
+ActiveRecord::Schema.define(version: 20150421193502) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "cname",      limit: 255
@@ -19,25 +19,15 @@ ActiveRecord::Schema.define(version: 20150421003524) do
     t.datetime "updated_at",             null: false
   end
 
-  create_table "create_courses", id: false, force: :cascade do |t|
-    t.integer  "student_id",  limit: 4
-    t.integer  "course_id",   limit: 4
-    t.date     "create_date"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
-  end
-
-  add_index "create_courses", ["student_id", "course_id"], name: "index_create_courses_on_student_id_and_course_id", using: :btree
-
-  create_table "create_studygroups", id: false, force: :cascade do |t|
-    t.integer  "student_id",     limit: 4
+  create_table "creators", id: false, force: :cascade do |t|
     t.integer  "study_group_id", limit: 4
+    t.integer  "course_id",      limit: 4
     t.date     "create_date"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end
 
-  add_index "create_studygroups", ["student_id", "study_group_id"], name: "index_create_studygroups_on_student_id_and_study_group_id", using: :btree
+  add_index "creators", ["study_group_id", "course_id"], name: "index_creators_on_study_group_id_and_course_id", using: :btree
 
   create_table "meeting_times", force: :cascade do |t|
     t.integer  "study_group_id", limit: 4

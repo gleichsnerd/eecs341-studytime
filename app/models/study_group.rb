@@ -10,6 +10,6 @@ class StudyGroup < ActiveRecord::Base
 	has_many :students, :through => :member
 
 	#Rich many-to-one rel. between studygroup and student where studen is the creator
-	has_one :create_studygroup
-	has_one :student, :through => :create_studygroup
+	has_one :creator
+	has_one :student, :through => :creator
 end

@@ -8,6 +8,6 @@ class Course < ActiveRecord::Base
 	has_one :study_group
 
 	#Relationship between Course and Student: A course can only have one student creator
-	has_one :create_course
-	has_one :student, :through => :create_course
+	has_one :creator
+	has_one :student, :through => :creator
 end
