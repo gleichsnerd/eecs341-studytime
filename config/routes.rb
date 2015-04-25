@@ -1,5 +1,22 @@
 Rails.application.routes.draw do
 
+  get 'static_pages/login/:email/:pwd', to: 'static_pages#login'
+
+  get 'static_pages/landing'
+
+  get 'static_pages/home'
+
+  get 'static_pages/select_group'
+
+  get 'static_pages/select_class'
+
+  get 'static_pages/create_class'
+
+  get 'static_pages/create_group'
+
+  get 'static_pages/group_details'
+
+#  root 'static_pages#landing'#'application#hello'
  
   resources :meeting_times
   resources :creators
