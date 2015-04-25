@@ -1,0 +1,25 @@
+<%= form_for(@meeting_time) do |f| %>
+  <% if @meeting_time.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@meeting_time.errors.count, "error") %> prohibited this meeting_time from being saved:</h2>
+
+      <ul>
+      <% @meeting_time.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :study_group_id %><br>
+    <%= f.number_field :study_group_id %>
+  </div>
+  <div class="field">
+    <%= f.label :mtime %><br>
+    <%= f.time_select :mtime %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

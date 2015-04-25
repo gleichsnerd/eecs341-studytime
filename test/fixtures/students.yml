@@ -1,14 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  sid: 
   sname: MyString
   email: MyString
   pwd: MyString
   token: MyString
 
 two:
-  sid: 
   sname: MyString
   email: MyString
   pwd: MyString

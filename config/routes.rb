@@ -16,7 +16,17 @@ Rails.application.routes.draw do
 
   get 'static_pages/group_details'
 
-  root 'static_pages#landing'#'application#hello'
+#  root 'static_pages#landing'#'application#hello'
+ 
+  resources :creators
+  resources :members
+  resources :teaches
+  resources :courses
+  resources :meeting_times
+  resources :professors
+  resources :study_groups
+  resources :students
+  root 'students#index'
   
     # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

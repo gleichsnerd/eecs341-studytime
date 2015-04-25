@@ -1,0 +1,29 @@
+<%= form_for(@creator) do |f| %>
+  <% if @creator.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@creator.errors.count, "error") %> prohibited this creator from being saved:</h2>
+
+      <ul>
+      <% @creator.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :study_group_id %><br>
+    <%= f.number_field :study_group_id %>
+  </div>
+  <div class="field">
+    <%= f.label :course_id %><br>
+    <%= f.number_field :course_id %>
+  </div>
+  <div class="field">
+    <%= f.label :create_date %><br>
+    <%= f.date_select :create_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

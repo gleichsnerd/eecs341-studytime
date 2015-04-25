@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Study group:</strong>
+  <%= @meeting_time.study_group_id %>
+</p>
+
+<p>
+  <strong>Mtime:</strong>
+  <%= @meeting_time.mtime %>
+</p>
+
+<%= link_to 'Edit', edit_meeting_time_path(@meeting_time) %> |
+<%= link_to 'Back', meeting_times_path %>
