@@ -31,4 +31,9 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get group_details" do
+    get :group_details
+    assert_response :success
+  end
+
 end

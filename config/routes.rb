@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   get 'static_pages/create_group'
 
+  get 'static_pages/group_details'
+
   root 'static_pages#landing'#'application#hello'
   
     # The priority is based upon order of creation: first created -> highest priority.
