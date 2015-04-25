@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'static_pages/login/:email/:pwd', to: 'static_pages#login'
+
   get 'static_pages/landing'
 
   get 'static_pages/home'

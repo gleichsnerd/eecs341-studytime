@@ -19,4 +19,9 @@ class StaticPagesController < ApplicationController
 
   def group_details
   end
+
+  def login
+    puts "foo!"
+  end
+
 end
