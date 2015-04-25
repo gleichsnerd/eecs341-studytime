@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
  
+  resources :meeting_times
   resources :creators
   resources :members
   resources :teaches
   resources :courses
-  resources :meeting_times
   resources :professors
   resources :study_groups
   resources :students

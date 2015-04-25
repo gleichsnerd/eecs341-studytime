@@ -7,4 +7,8 @@ class Student < ActiveRecord::Base
 	has_many :creators
 	has_many :study_groups, :through => :creator
 
+
+	validates :sname, presence: true
+	validates :email, presence: true
+	validates :pwd, presence: true
 end

@@ -4,9 +4,10 @@ class CreateMeetingTimes < ActiveRecord::Migration
     	t.integer "study_group_id"
     	#t.integer "gid", :null => false
     	#t.integer "mid", :null => false
-    	t.time "mtime"
+    	t.datetime "mtime"
     	
       t.timestamps null: false
     end
   end
 end
+

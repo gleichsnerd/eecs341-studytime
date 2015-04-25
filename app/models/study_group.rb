@@ -12,4 +12,12 @@ class StudyGroup < ActiveRecord::Base
 	#Rich many-to-one rel. between studygroup and student where studen is the creator
 	has_one :creator
 	has_one :student, :through => :creator
+
+
+
+
+	#Content validations
+	validates :course_id, presence: true
+	validates :gname, presence: true
+	validates :location, presence: true
 end
