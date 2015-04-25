@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Study group:</strong>
+  <%= @creator.study_group_id %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @creator.course_id %>
+</p>
+
+<p>
+  <strong>Create date:</strong>
+  <%= @creator.create_date %>
+</p>
+
+<%= link_to 'Edit', edit_creator_path(@creator) %> |
+<%= link_to 'Back', creators_path %>
