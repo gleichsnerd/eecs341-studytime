@@ -54,7 +54,6 @@ ActiveRecord::Schema.define(version: 20150425195743) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.integer  "sid",        limit: 4
     t.string   "sname",      limit: 255
     t.string   "email",      limit: 255
     t.string   "pwd",        limit: 255

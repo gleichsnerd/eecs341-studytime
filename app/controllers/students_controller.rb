@@ -1,6 +1,21 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: [:show, :edit, :update, :destroy]
 
+  def login
+    
+    render :nothing => true
+  end
+
+  def register
+    @student = Student.new
+    if @user.save
+        #Save successful, go to home page
+        redirect_to @student
+    else
+        render 'new'
+    end
+  end
+  
   # GET /students
   # GET /students.json
   def index

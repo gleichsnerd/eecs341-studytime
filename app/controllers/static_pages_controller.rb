@@ -1,6 +1,8 @@
 class StaticPagesController < ApplicationController
   def landing
+    @student = Student.new
   end
+
 
   def home
   end
@@ -18,10 +20,6 @@ class StaticPagesController < ApplicationController
   end
 
   def group_details
-  end
-
-  def login
-    puts "foo!"
   end
 
 end

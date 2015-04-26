@@ -2,7 +2,19 @@
 
 <div class="left jumbotron">
     <h1>studyti.me</h1>
-    <div class="btn btn-lg btn-primary">
-        <a href="/static-pages/login/bob@ross.com/butts">Login</a>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <%= form_for(@student) do |f| %>
+            <p>Email</p>
+            <%= f.email_field :email %>
+            <p>Password</p>
+            <%= f.password_field :pwd %>
+        <% end %>
     </div>
 </div>
+
+<%= link_to "Login", "login", class:"btn btn-lg btn-primary"%>
+<%= link_to "Register", "register", class:"btn btn-lg btn-primary"%>
+
