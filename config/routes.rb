@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
 
-  get 'static_pages/login/:email/:pwd', to: 'static_pages#login'
+  get 'sessions/new'
 
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+
+  get 'register' => 'students#new'
+  
   get 'static_pages/landing'
 
   get 'static_pages/home'
@@ -16,7 +22,7 @@ Rails.application.routes.draw do
 
   get 'static_pages/group_details'
 
-#  root 'static_pages#landing'#'application#hello'
+  root 'static_pages#landing'#'application#hello'
  
   resources :meeting_times
   resources :creators
@@ -27,7 +33,6 @@ Rails.application.routes.draw do
   resources :study_groups
   resources :students
 
-  root 'students#index'
   
     # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

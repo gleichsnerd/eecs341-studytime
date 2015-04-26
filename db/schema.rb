@@ -54,13 +54,12 @@ ActiveRecord::Schema.define(version: 20150425202551) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.integer  "sid",        limit: 4
-    t.string   "sname",      limit: 255
-    t.string   "email",      limit: 255
-    t.string   "pwd",        limit: 255
-    t.string   "token",      limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "sname",           limit: 255
+    t.string   "email",           limit: 255
+    t.string   "token",           limit: 255
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "password_digest", limit: 255
   end
 
   create_table "study_groups", force: :cascade do |t|
