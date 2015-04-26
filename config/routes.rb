@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   resources :professors
   resources :study_groups
   resources :students
+
   root 'students#index'
   
     # The priority is based upon order of creation: first created -> highest priority.

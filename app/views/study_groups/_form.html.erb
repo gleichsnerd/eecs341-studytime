@@ -11,23 +11,34 @@
     </div>
   <% end %>
 
+  <!-- <div class="field">
+    <%= f.hidden_field :course_id, value: nil %><br>
+    <%= f.submit "Remove", class: "btn" %>
+  </div> --> 
+  
   <div class="field">
     <%= f.label :course_id %><br>
     <%= f.number_field :course_id %>
   </div>
+
   <div class="field">
-    <%= f.label :gname %><br>
+    <%= f.label "Name" %><br>
     <%= f.text_field :gname %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label "Description" %><br>
     <%= f.text_field :description %>
   </div>
   <div class="field">
-    <%= f.label :location %><br>
+    <%= f.label "Location" %><br>
     <%= f.text_field :location %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+
+
+
+
+
 <% end %>

@@ -4,7 +4,7 @@ class StudyGroup < ActiveRecord::Base
 
 	#Many-to-one rel. between study_group and course
 	belongs_to :course
-
+	#validates_presence_of :course
 	#Rich many-to-many rel. between studygroup and student
 	has_many :members
 	has_many :students, :through => :member
@@ -17,7 +17,8 @@ class StudyGroup < ActiveRecord::Base
 
 
 	#Content validations
-	validates :course_id, presence: true
+	#validates :course_id, presence: true
 	validates :gname, presence: true
 	validates :location, presence: true
+	validates_uniqueness_of :gname
 end

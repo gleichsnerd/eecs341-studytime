@@ -11,4 +11,5 @@ class Student < ActiveRecord::Base
 	validates :sname, presence: true
 	validates :email, presence: true
 	validates :pwd, presence: true
+	validates_uniqueness_of :email
 end

@@ -6,4 +6,5 @@ class Professor < ActiveRecord::Base
 
 	validates :pname, presence: true
 	validates :email, presence: true
+	validates_uniqueness_of :email
 end

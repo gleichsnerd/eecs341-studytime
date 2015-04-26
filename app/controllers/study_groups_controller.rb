@@ -37,6 +37,7 @@ class StudyGroupsController < ApplicationController
     end
   end
 
+
   # PATCH/PUT /study_groups/1
   # PATCH/PUT /study_groups/1.json
   def update
