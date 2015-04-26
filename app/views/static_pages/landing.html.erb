@@ -6,15 +6,16 @@
 
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
-        <%= form_for(@student) do |f| %>
-            <p>Email</p>
-            <%= f.email_field :email %>
-            <p>Password</p>
-            <%= f.password_field :pwd %>
+        <%= form_for(:session, url:login_path) do |f| %>
+            <%= f.label :email, "Email" %>
+            <%= f.email_field :email, class: 'form-control' %>
+            <%= f.label :pwd, "Password"%>
+            <%= f.password_field :pwd, class: 'form-control' %>
+
+            <%= f.submit "Log in", class: "btn btn-primary" %>
         <% end %>
+        <%= link_to "Register", "register", class:"btn btn-primary"%>
     </div>
 </div>
 
-<%= link_to "Login", "login", class:"btn btn-lg btn-primary"%>
-<%= link_to "Register", "register", class:"btn btn-lg btn-primary"%>
 

@@ -3,7 +3,6 @@ class StaticPagesController < ApplicationController
     @student = Student.new
   end
 
-
   def home
   end
 

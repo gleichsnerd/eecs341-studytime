@@ -7,4 +7,5 @@ class Student < ActiveRecord::Base
 	has_many :creators
 	has_many :study_groups, :through => :creator
 
+    has_secure_password
 end

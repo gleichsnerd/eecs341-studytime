@@ -6,15 +6,6 @@ class StudentsController < ApplicationController
     render :nothing => true
   end
 
-  def register
-    @student = Student.new
-    if @user.save
-        #Save successful, go to home page
-        redirect_to @student
-    else
-        render 'new'
-    end
-  end
   
   # GET /students
   # GET /students.json
@@ -84,6 +75,6 @@ class StudentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_params
-      params.require(:student).permit(:sname, :email, :pwd, :token)
+      params.require(:student).permit(:sname, :email, :password, :password_confirmation)
     end
 end

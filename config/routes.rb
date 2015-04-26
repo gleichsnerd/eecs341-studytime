@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
   resources :students
-  get 'login', to: "students#login"
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+
   get 'register' => 'students#new'
   
-  get 'static_pages/register'
-
   get 'static_pages/landing'
 
   get 'static_pages/home'
