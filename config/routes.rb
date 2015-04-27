@@ -2,37 +2,15 @@ Rails.application.routes.draw do
 
   get 'sessions/new'
 
+  resources :students
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 
   get 'register' => 'students#new'
-  
-  get 'static_pages/landing'
-
-  get 'static_pages/home'
-
-  get 'static_pages/select_group'
-
-  get 'static_pages/select_class'
-
-  get 'static_pages/create_class'
-
-  get 'static_pages/create_group'
-
-  get 'static_pages/group_details'
 
   root 'static_pages#landing'#'application#hello'
  
-  resources :meeting_times
-  resources :creators
-  resources :members
-  resources :teaches
-  resources :courses
-  resources :professors
-  resources :study_groups
-  resources :students
-
   
     # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

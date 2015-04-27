@@ -9,7 +9,7 @@ class Student < ActiveRecord::Base
 
 	validates :sname, presence: true
 	validates :email, presence: true
-	validates :pwd, presence: true
+	validates :password_digest, presence: true
 	validates_uniqueness_of :email
 
     has_secure_password
