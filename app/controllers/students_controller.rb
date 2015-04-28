@@ -16,6 +16,11 @@ class StudentsController < ApplicationController
   # GET /students/1
   # GET /students/1.json
   def show
+      @groups = []
+      @members = Member.where(student_id: @student.id)
+      @members.each do |m|
+          @groups << StudyGroup.find(m.study_group_id)
+      end
   end
 
   # GET /students/new

@@ -15,5 +15,5 @@ module SessionsHelper
     def log_out
         session.delete(:student_id)
         @current_student = nil
-
+    end
 end

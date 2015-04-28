@@ -1,14 +1,28 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Sname:</strong>
-  <%= @student.sname %>
-</p>
+<div class="left jumbotron">
+    <h1><%=@student.sname%></h1>
+</div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @student.email %>
-</p>
+<h2>My Groups</h2>
+<div class="row">
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-2">Name</div>
+            <div class="col-md-2">Description</div>
+        </div>
+        <% @groups.each do |g| %>
+            <div class="row">
+                <div class="col-md-2"><%=g.gname%></p> </div>
+                <div class="col-md-2"><%=g.description%></p></div>
+            </div>
 
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>
+        <% end %>
+    </div>
+    <div class="col-md-3">
+        <div class="row">
+            <%= link_to "Join a group", study_groups_path%>
+        </div>
+        <div class="row">
+            <%= link_to "Create a group", courses_path%> 
+</div>

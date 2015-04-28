@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
           #Golden, time to login and redirect to student#show
           puts "Success!"
           log_in student
+          redirect_to student
       else
           puts "Invalid authentication"
           flash.now[:danger] = 'Invalid email or password'
