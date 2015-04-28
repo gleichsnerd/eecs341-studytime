@@ -14,7 +14,9 @@ class MembersController < ApplicationController
 
   # GET /members/new
   def new
+    #@student = Student.find(sid)
     @member = Member.new
+    @groups = StudyGroup.first(1000)
   end
 
   # GET /members/1/edit
